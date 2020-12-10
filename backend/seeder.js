@@ -2,9 +2,11 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import colors from "colors";
 
+// * Import Data
 import users from "./data/users.js";
 import products from "./data/products.js";
 
+// * Import Models
 import User from "./models/userModel.js";
 import Product from "./models/productModel.js";
 import Order from "./models/orderModel.js";
