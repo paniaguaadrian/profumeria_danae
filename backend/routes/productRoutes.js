@@ -2,6 +2,7 @@ import express from "express";
 
 // ? To keep tracking of erros in every single async functionality
 import asyncHandler from "express-async-handler";
+
 const router = express.Router();
 
 import Product from "../models/productModel.js";
@@ -28,7 +29,8 @@ router.get(
     if (product) {
       res.json(product);
     } else {
-      res.status(404).json({ message: "Product not found" });
+      res.status(404);
+      throw new Error("Product not found");
     }
   })
 );
