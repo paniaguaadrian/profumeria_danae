@@ -12,7 +12,7 @@ import {
 } from "react-bootstrap";
 
 // * Actions
-import { addToCart } from "../actions/cartActions";
+import { addToCart, removeFromCart } from "../actions/cartActions";
 
 // * Components
 import Message from "../components/Message";
@@ -33,7 +33,7 @@ const CartScreen = ({ match, location, history }) => {
   }, [dispatch, productId, qty]);
 
   const removeFromCartHandler = (id) => {
-    console.log("remove");
+    dispatch(removeFromCart(id));
   };
 
   const checkoutHandler = () => {
