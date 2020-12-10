@@ -1,0 +1,22 @@
+{
+  "name": "08.ecommerce-udemy-brad",
+  "version": "1.0.0",
+  "description": "MERN eCommerce Profumeria Danae",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paniaguaadrian/profumeria_danae.git"
+  },
+  "author": "Adrián Paniagua Sanchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/paniaguaadrian/profumeria_danae/issues"
+  },
+  "homepage": "https://github.com/paniaguaadrian/profumeria_danae#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
