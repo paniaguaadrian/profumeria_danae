@@ -74,6 +74,7 @@ Rating.defaultProps = {
 };
 
 Rating.propTypes = {
+  // ! This makes an big error con console (required on value)
   value: PropTypes.number.isRequired,
   text: PropTypes.string.isRequired,
   color: PropTypes.string,
