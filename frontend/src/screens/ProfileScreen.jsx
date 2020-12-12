@@ -10,6 +10,8 @@ import Loader from "../components/Loader";
 // * Actions
 import { getUserDetails, updateUserProfile } from "../actions/userActions";
 
+import { USER_UPDATE_PROFILE_RESET } from "../constants/userConstants";
+
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -32,15 +34,15 @@ const ProfileScreen = ({ location, history }) => {
     if (!userInfo) {
       history.push("/login");
     } else {
-      if (!user.name) {
+      if (!user.name || success) {
+        dispatch({ type: USER_UPDATE_PROFILE_RESET });
         dispatch(getUserDetails("profile"));
       } else {
-        console.log(user.name);
         setName(user.name);
         setEmail(user.email);
       }
     }
-  }, [dispatch, history, userInfo, user]);
+  }, [dispatch, history, userInfo, user, success]);
 
   const submitHandler = (e) => {
     e.preventDefault();
