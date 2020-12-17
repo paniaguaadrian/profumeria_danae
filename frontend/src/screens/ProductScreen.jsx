@@ -80,10 +80,10 @@ const ProductScreen = ({ history, match }) => {
       ) : (
         <>
           <Row>
-            <Col md={6}>
+            <Col md={6} className="product-page-section">
               <Image src={product.image} alt={product.name} fluid />
             </Col>
-            <Col md={3}>
+            <Col md={3} className="product-page-section">
               <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
@@ -100,21 +100,21 @@ const ProductScreen = ({ history, match }) => {
                 </ListGroup.Item>
               </ListGroup>
             </Col>
-            <Col md={3}>
+            <Col md={3} className="product-page-section">
               <Card>
                 <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
-                      <Col>Price:</Col>
-                      <Col>
+                      <Col className="product-page-section">Price:</Col>
+                      <Col className="product-page-section">
                         <strong>{product.price}€</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
                   <ListGroup.Item>
                     <Row>
-                      <Col>Status:</Col>
-                      <Col>
+                      <Col className="product-page-section">Status:</Col>
+                      <Col className="product-page-section">
                         <strong>
                           {" "}
                           {product.countInStock > 0
@@ -128,7 +128,7 @@ const ProductScreen = ({ history, match }) => {
                   {product.countInStock > 0 && (
                     <ListGroup.Item>
                       <Row>
-                        <Col>Qty</Col>
+                        <Col className="product-page-section">Quantity</Col>
                         <Col>
                           <Form.Control
                             as="select"
@@ -163,7 +163,7 @@ const ProductScreen = ({ history, match }) => {
             </Col>
           </Row>
           <Row>
-            <Col md={6}>
+            <Col md={6} className="product-page-section">
               <h2>Reviews</h2>
               {product.reviews.length === 0 && <Message>No reviews</Message>}
               <ListGroup variant="flush">
