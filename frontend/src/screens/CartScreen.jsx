@@ -16,6 +16,7 @@ import { addToCart, removeFromCart } from "../actions/cartActions";
 
 // * Components
 import Message from "../components/Message";
+import Meta from "../components/Meta";
 
 const CartScreen = ({ match, location, history }) => {
   const productId = match.params.id;
@@ -42,6 +43,7 @@ const CartScreen = ({ match, location, history }) => {
 
   return (
     <Row>
+      <Meta title={"Your Cart"} />
       <Col md={8}>
         <h1>Shopping Cart</h1>
         {cartItems.length === 0 ? (

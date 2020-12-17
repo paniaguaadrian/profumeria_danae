@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 // * Components
 import Message from "../components/Message";
 import Loader from "../components/Loader";
+import Meta from "../components/Meta";
 
 // * Actions
 // Users
@@ -63,6 +64,7 @@ const ProfileScreen = ({ location, history }) => {
 
   return (
     <Row>
+      <Meta title={`${user.name} Profile`} />
       <Col md={3}>
         <h2>User Profile</h2>
         {message && <Message variant="danger">{message}</Message>}

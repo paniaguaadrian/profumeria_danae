@@ -35,9 +35,12 @@ const HomeScreen = ({ match }) => {
       {!keyword ? (
         <ProductCarousel />
       ) : (
-        <Link to="/" className="btn btn-light">
-          Go Back
-        </Link>
+        <>
+          <Meta title={`Search of: ${keyword}`} />
+          <Link to="/" className="btn btn-light">
+            Go Back
+          </Link>
+        </>
       )}
       <h1 className="home-screen-title">OUR PRODUCTS</h1>
       {loading ? (
