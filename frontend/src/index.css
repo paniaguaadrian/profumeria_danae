@@ -20,6 +20,11 @@ h3 {
   margin: 0.1rem;
 }
 
+/* Home Screen */
+.home-screen-title {
+  margin-top: 4rem;
+}
+
 /* Product */
 
 .image-handler {
